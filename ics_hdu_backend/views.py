@@ -24,7 +24,7 @@ def upload(request):
             image=["jpg","bmp","png","jpeg"]
             mov=["mp4","3gp","mpg","avi","wmv","flv","swf"]
             #路径需要修改
-            pathdir='/Users/feiyu/Codes/WebDesigh/test1/'
+            pathdir='路径'
             if backname[1].lower() in image:
                 ba = base64.b64encode('headImg.name'.encode('utf-8'))
                 path=default_storage.save(pathdir+'/media/image/'+str(year)+'/'+str(month)\
