@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from ics_hdu_backend import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    #
+    path('index/', views.index),
+    path('conference/', views.conference),
+    path('chair/', views.chairs),
+    path('about/', views.about)
 ]
