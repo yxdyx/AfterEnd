@@ -1,0 +1,18 @@
+@media (max-width: 1200px) {
+
+
+	.conftimetable {
+		width: 94%;
+		padding: 50px 3% 50px 3%;
+	}
+
+	.conftimetable .faqbox {
+		width: 100%;
+		margin: 0 0 30px 0;
+	}
+
+	.conftimetable .faqbox.longer {
+		width: 100%;
+		margin: 0 0 30px 0;
+	}
+}
