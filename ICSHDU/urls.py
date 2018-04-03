@@ -20,9 +20,27 @@ from ics_hdu_backend import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    #
-    path('index/', views.index),
-    path('conference/', views.conference),
-    path('chair/', views.chairs),
-    path('about/', views.about)
+    # html文件url地址
+    # 首页
+    path(r'^index/', views.index),
+    # 会议
+    path(r'^conference/', views.conference),
+    # 主席
+    path(r'^chair/', views.chairs),
+    # 关于
+    path(r'^about/', views.about),
+
+    # 前端请求的url
+    # 用户注册
+    path(r'^user_register/', views.register),
+    # 用户登陆
+    path(r'^user_login/', views.login),
+    # 主席信息录入
+    path(r'^add_chair/', views.add_chair),
+    # 查询主席信息
+    path(r'^chair/<int: chair_id>', views.query_chair),
+    # 根据session查询所有会议信息
+    path(r'^/conference/<int: session>/query_all_conference', views.query_conference),
+
+
 ]
