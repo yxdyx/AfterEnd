@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """ICSHDU URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -13,6 +15,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path
 from ics_hdu_backend import views
@@ -22,25 +25,26 @@ urlpatterns = [
 
     # html文件url地址
     # 首页
-    path(r'^index/', views.index),
+    path('', views.index),
+    path('index/', views.index),
     # 会议
-    path(r'^conference/', views.conference),
+    path('conference/', views.conference),
     # 主席
-    path(r'^chair/', views.chairs),
+    path('chair/', views.chairs),
     # 关于
-    path(r'^about/', views.about),
+    path('about/', views.about),
+    # 会议组
+    path('team/', views.team),
 
     # 前端请求的url
     # 用户注册
-    path(r'^user_register/', views.register),
+    path('user_register/', views.register),
     # 用户登陆
-    path(r'^user_login/', views.login),
+    path('user_login/', views.login),
     # 主席信息录入
-    path(r'^add_chair/', views.add_chair),
+    path('add_chair/', views.add_chair),
     # 查询主席信息
-    path(r'^chair/<int: chair_id>', views.query_chair),
+    path('chair/<int: chair_id>', views.query_chair),
     # 根据session查询所有会议信息
-    path(r'^/conference/<int: session>/query_all_conference', views.query_conference),
-
-
+    path('conference/<int: session>/query_all_conference', views.query_conference),
 ]

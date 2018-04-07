@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 from django.shortcuts import render
 
 
@@ -37,6 +40,15 @@ def about(request):
     :return:
     """
     return render(request, 'about.html')
+
+
+def team(request):
+    """
+
+    :param request:
+    :return:
+    """
+    return render(request, 'team.html')
 
 
 # 前端发送请求的接收

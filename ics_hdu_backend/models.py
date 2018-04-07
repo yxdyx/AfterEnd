@@ -13,7 +13,7 @@ class Awards(models.Model):
 
 
 class Importantdate(models.Model):
-    id_important= models.AutoField(primary_key=True)
+    id_important = models.AutoField(primary_key=True)
     id_pm_year = models.IntegerField()
     id_type = models.IntegerField()
     id_name = models.CharField(max_length=55)
@@ -71,6 +71,8 @@ class Paper(models.Model):
     class Meta:
         managed = False
         db_table = 'papaer'
+
+
 class Seminar(models.Model):
     s_id = models.AutoField(primary_key=True)
     s_name = models.CharField(max_length=255)
