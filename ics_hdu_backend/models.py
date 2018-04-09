@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 import base64
 
+
 class Awards(models.Model):
     a_id = models.AutoField(primary_key=True)
     a_name = models.CharField(max_length=255)
@@ -83,12 +84,14 @@ class Seminar(models.Model):
         managed = False
         db_table = 'seminar'
 
-#主席照片在admin内录入
+
+# 主席照片在admin内录入
 def upload_to(instance, filename):
     splitname = filename.split('.')
     namebase = base64.b64encode(splitname[0].encode('utf-8'))
     realname = str(namebase, 'utf-8') + '.' + splitname[len(splitname) - 1]
     return '/'.join([settings.STATIC_ROOT, 'images', 'chair', instance.chair_id, instance.year, realname])
+
 
 class Chair_picture(models.Model):
     chair_id = models.CharField(max_length=16, default="")
