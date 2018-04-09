@@ -89,6 +89,5 @@ class Chair_img(models.Model):
     chair_id = models.CharField(max_length=32, default="")
     img_year = models.CharField(max_length=32, default="")
     chair_img = models.ImageField(upload_to=upload_to, max_length=150)
-
     def __str__(self):
         return self.chair_id
