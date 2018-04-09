@@ -15,3 +15,9 @@
 4.static: 存放网页静态资源的文件夹
 
 5.templates: 存放网页文件（html）文件
+
+> 后端进度
+
+1.2018-4-9
+在admin内增加录入主席照片的功能
+由于使用了ImageField，到时候环境需要安装pillow

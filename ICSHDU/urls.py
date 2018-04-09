@@ -20,6 +20,7 @@ from django.contrib import admin
 from django.urls import path
 from ics_hdu_backend import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 
@@ -47,4 +48,5 @@ urlpatterns = [
     path('chair/<int: chair_id>', views.query_chair),
     # 根据session查询所有会议信息
     path('conference/<int: session>/query_all_conference', views.query_conference),
+
 ]
