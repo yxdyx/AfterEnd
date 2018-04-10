@@ -34,6 +34,8 @@ urlpatterns = [
     path('chair/', views.chairs),
     # 关于
     path('about/', views.about),
+    # 主席信息页面
+    path('figure/<int:chair_id>', views.figure),
     # 会议组
     path('team/', views.team),
 
@@ -45,8 +47,8 @@ urlpatterns = [
     # 主席信息录入
     path('add_chair/', views.add_chair),
     # 查询主席信息
-    path('chair/<int: chair_id>', views.query_chair),
+    path('chair/<int:chair_id>', views.query_chair),
     # 根据session查询所有会议信息
-    path('conference/<int: session>/query_all_conference', views.query_conference),
+    path('conference/<int:session>/query_all_conference', views.query_conference),
 
 ]

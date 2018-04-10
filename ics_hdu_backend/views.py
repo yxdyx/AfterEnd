@@ -51,6 +51,17 @@ def team(request):
     return render(request, 'team.html')
 
 
+def figure(request, chair_id):
+    """
+
+    :param chair_id:
+    :param request:
+    :return:
+    """
+    print(chair_id)
+    return render(request, 'figure.html')
+
+
 # 前端发送请求的接收
 
 def register(request):
