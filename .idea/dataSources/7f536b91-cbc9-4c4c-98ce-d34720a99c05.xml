@@ -932,40 +932,40 @@
     </table>
     <column id="236" parent="231" name="chair_id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11) |0s|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="237" parent="231" name="chair_name">
       <Position>2</Position>
-      <DataType>char(50)|0s</DataType>
+      <DataType>char(50) |0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8_general_ci</Collation>
     </column>
     <column id="238" parent="231" name="chair_org">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(255) |0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8_general_ci</Collation>
     </column>
     <column id="239" parent="231" name="chair_info">
       <Position>4</Position>
-      <DataType>text|0s</DataType>
+      <DataType>text|0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="240" parent="231" name="chair_add_time">
       <Position>5</Position>
-      <DataType>date|0s</DataType>
+      <DataType>date|0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="241" parent="231" name="chair_update_time">
       <Position>6</Position>
-      <DataType>date|0s</DataType>
+      <DataType>date|0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -976,26 +976,26 @@
     </key>
     <column id="243" parent="232" name="chair_pic_id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11) |0s|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="244" parent="232" name="chair_id">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11) |0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="245" parent="232" name="session">
       <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11) |0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="246" parent="232" name="chair_pic_url">
       <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(255) |0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8_general_ci</Collation>
@@ -1007,46 +1007,46 @@
     </key>
     <column id="248" parent="233" name="conference_id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11) |0s|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="249" parent="233" name="session">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11) |0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="250" parent="233" name="conference_topic">
       <Position>3</Position>
-      <DataType>char(255)|0s</DataType>
+      <DataType>char(255) |0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8_general_ci</Collation>
     </column>
     <column id="251" parent="233" name="conference_start_time">
       <Position>4</Position>
-      <DataType>datetime|0s</DataType>
+      <DataType>datetime|0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="252" parent="233" name="conference_end_time">
       <Position>5</Position>
-      <DataType>datetime|0s</DataType>
+      <DataType>datetime|0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="253" parent="233" name="conference_locations">
       <Position>6</Position>
-      <DataType>varchar(512)|0s</DataType>
+      <DataType>varchar(512) |0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8_general_ci</Collation>
     </column>
     <column id="254" parent="233" name="chair_id">
       <Position>7</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11) |0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1057,20 +1057,20 @@
     </key>
     <column id="256" parent="234" name="manage_id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11) |0s|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="257" parent="234" name="conference_id">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11) |0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="258" parent="234" name="chair_id">
       <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11) |0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1081,28 +1081,28 @@
     </key>
     <column id="260" parent="235" name="user_id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>int(11) |0s|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="261" parent="235" name="user_name">
       <Position>2</Position>
-      <DataType>char(255)|0s</DataType>
+      <DataType>char(255) |0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8_general_ci</Collation>
     </column>
     <column id="262" parent="235" name="user_email">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(255) |0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8_general_ci</Collation>
     </column>
     <column id="263" parent="235" name="user_password">
       <Position>4</Position>
-      <DataType>char(20)|0s</DataType>
+      <DataType>char(20) |0s|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8_general_ci</Collation>
