@@ -85,9 +85,16 @@ class Seminar(models.Model):
 
 
 # 主席照片在admin内录入
-class Chair_img(models.Model):
-    chair_id = models.CharField(max_length=32, default="")
-    img_year = models.CharField(max_length=32, default="")
-    chair_img = models.ImageField(upload_to=upload_to, max_length=150)
+class ChairPic(models.Model):
+    chair_pic_id = models.AutoField(primary_key=True)
+    chair_id = models.CharField(max_length=32)
+    session = models.CharField(max_length=32)
+    chair_pic_url = models.ImageField(upload_to=upload_to, max_length=150)
+    class Meta:
+        managed = False
+        db_table = 'ChairPic'
+
     def __str__(self):
-        return self.chair_id
+        return str(self.chair_id) + '/' + str(self.session)
+
+
