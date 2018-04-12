@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
-
+from django.http import HttpResponse
 from django.shortcuts import render
+from ics_hdu_backend.service.chair_show_info import ChairInfoShow
 
 
 # Create your views here.
@@ -58,7 +59,6 @@ def figure(request, chair_id):
     :param request:
     :return:
     """
-    print(chair_id)
     return render(request, 'figure.html')
 
 
@@ -94,10 +94,12 @@ def add_chair(request):
 def query_chair(request, chair_id):
     """
 
+    :param chair_id:
     :param request:
     :return:
     """
-    pass
+    _chair_info = ChairInfoShow(chair_id=chair_id, query_type='single').query_chair()
+    return HttpResponse(_chair_info)
 
 
 def query_conference(request, session):
