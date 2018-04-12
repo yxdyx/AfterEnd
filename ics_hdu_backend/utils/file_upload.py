@@ -25,3 +25,9 @@ class Multimedia(object):
                          'images',
                          'chair',
                          self._instance.chair_id + self._instance.img_year + realName])
+
+def upload_to(instance, filename):
+    splitname = filename.split('.')
+    namebase = base64.b64encode(splitname[0].encode('utf-8'))
+    realname = str(namebase, 'utf-8') + '.' + splitname[len(splitname) - 1]
+    return '/'.join([settings.STATIC_ROOT, 'images', 'chair', instance.chair_id, instance.session, realname])
