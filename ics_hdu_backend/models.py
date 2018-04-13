@@ -39,7 +39,7 @@ class ChairPic(models.Model):
     chair_pic_id = models.AutoField(primary_key=True)
     chair_id = models.IntegerField()
     session = models.IntegerField()
-    chair_pic_url = models.CharField(max_length=255)
+    chair_pic_url = models.CharField(upload_to=Multimedia.upload_to, max_length=255)
 
     class Meta:
         managed = False
@@ -120,29 +120,5 @@ class User(models.Model):
                     'user_name': self.user_name,
                     'user_email': self.user_email,
                     'user_password': self.user_password})
-
-
-<<<<<<< HEAD
-class Chair_img(models.Model):
-    """
-    数据库中主席照片信息
-    """
-    chair_id = models.CharField(max_length=32, default="")
-    img_year = models.CharField(max_length=32, default="")
-    chair_img = models.ImageField(upload_to=Multimedia.upload_to, max_length=150)
-=======
-# 主席照片在admin内录入
-class ChairPic(models.Model):
-    chair_pic_id = models.AutoField(primary_key=True)
-    chair_id = models.CharField(max_length=32)
-    session = models.CharField(max_length=32)
-    chair_pic_url = models.ImageField(upload_to=upload_to, max_length=150)
-    class Meta:
-        managed = False
-        db_table = 'ChairPic'
->>>>>>> c424fc4c02f975a2587acdafb469f6652c7e0347
-
-    def __str__(self):
-        return str(self.chair_id) + '/' + str(self.session)
 
 
