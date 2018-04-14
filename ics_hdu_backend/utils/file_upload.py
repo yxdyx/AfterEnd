@@ -3,6 +3,10 @@ import base64
 
 
 class Multimedia(object):
+    """
+    更改图片上传路径
+    by: junyachen
+    """
     def __init__(self):
         """
 
