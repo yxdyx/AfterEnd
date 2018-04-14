@@ -1,21 +1,17 @@
-from django.conf import settings
 from ics_hdu_backend.models import Chair
-from ics_hdu_backend.models import Manage_Chair_Conference
 from ics_hdu_backend.utils.ret_obj import ResultData
-import datetime
+from ics_hdu_backend.model import DB as sql
 
 
 class ChairInfoShow(object):
-    def __init__(self, chair_id, session=datetime.datetime.now().year, query_type='single'):
+    def __init__(self, number, query_type='single'):
         """
 
-        :param chair_id:
-        :param session:
+        :type number: object
         :param query_type: 查询方式 {单查询：single, 全部查询：all, 按会议年份查询：session]
         """
         self.tmp = None
-        self.chair_id = chair_id
-        self.session = session
+        self.number = number
         self.query_type = query_type
         self.json_utils = ResultData()
 
@@ -30,23 +26,21 @@ class ChairInfoShow(object):
             self.__get_chair_info_all()
         else:
             self.__get_chair_info_by_session()
-        return self.json_utils.query_data_beautify(result_data=self.tmp).get_result_data()
+        return self.json_utils.query_data_beautify(result_data=self.tmp)
 
     def __get_chair_info_by_chair_id(self):
         """
         按chair_id查询
         :return:
         """
-        self.tmp = Chair.objects.filter(chair_id=self.chair_id)
+        self.tmp = Chair.objects.raw(sql.CHAIR_INFO_BY_CHAIR_ID, [self.number])
 
     def __get_chair_info_by_session(self):
         """
         按session查询
         :return:
         """
-        self.tmp = Manage_Chair_Conference.objects\
-                                          .filter(session=self.session)\
-                                          .select_related('Chair')
+        self.tmp = Chair.objects.raw(sql.CHAIR_INFO_BY_SESSION, [self.number])
 
     def __get_chair_info_all(self):
         """

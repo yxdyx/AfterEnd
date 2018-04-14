@@ -3,19 +3,16 @@ import base64
 
 
 class Multimedia(object):
-    def __init__(self, instance, filename):
+    def __init__(self):
         """
 
-        :param instance:
-        :param filename: 文件名
         """
-        self._instance = instance
-        self._filename = filename
-        self.upload_to()
+        pass
 
-    def upload_to(self, filename, *instance):
-        """
+    def upload_to(self, filename):
+        """1
         接收源文件二进制编码数据，将二进制编码数据进行保存
+        :type filename: object
         :return:
         """
         splitName = filename.split('.')

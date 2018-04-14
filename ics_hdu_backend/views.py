@@ -52,6 +52,15 @@ def team(request):
     return render(request, 'team.html')
 
 
+def register(request):
+    """
+
+    :param request:
+    :return:
+    """
+    return render(request, 'register.html')
+
+
 def figure(request, chair_id):
     """
 
@@ -59,12 +68,14 @@ def figure(request, chair_id):
     :param request:
     :return:
     """
-    return render(request, 'figure.html')
+    chair = ChairInfoShow(number=chair_id, query_type='single').query_chair().tmp[0]
+    print(chair)
+    return render(request, 'figure.html', chair)
 
 
 # 前端发送请求的接收
 
-def register(request):
+def user_register(request):
     """
 
     :param request:
@@ -73,7 +84,7 @@ def register(request):
     pass
 
 
-def login(request):
+def user_login(request):
     """
 
     :param request:
@@ -91,14 +102,15 @@ def add_chair(request):
     pass
 
 
-def query_chair(request, chair_id):
+def query_chair(request, query_type, number):
     """
 
-    :param chair_id:
+    :param query_type:
+    :param number:
     :param request:
     :return:
     """
-    _chair_info = ChairInfoShow(chair_id=chair_id, query_type='single').query_chair()
+    _chair_info = ChairInfoShow(number=number, query_type=query_type).query_chair().get_result_data()
     return HttpResponse(_chair_info)
 
 

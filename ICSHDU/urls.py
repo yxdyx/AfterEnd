@@ -17,7 +17,7 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from ics_hdu_backend import views
 
 
@@ -26,28 +26,30 @@ urlpatterns = [
 
     # html文件url地址
     # 首页
-    path('', views.index),
-    path('index/', views.index),
+    re_path('^$', views.index),
+    re_path('^index$', views.index),
     # 会议
-    path('conference/', views.conference),
+    re_path('^conference$', views.conference),
     # 主席
-    path('chair/', views.chairs),
+    re_path('^chairs$', views.chairs),
     # 关于
-    path('about/', views.about),
+    re_path('^about$', views.about),
+    # 会议组
+    re_path('^team$', views.team),
+    #
+    re_path('^register$', views.register),
     # 主席信息页面
     path('figure/<int:chair_id>', views.figure),
-    # 会议组
-    path('team/', views.team),
 
     # 前端请求的url
     # 用户注册
-    path('user_register/', views.register),
+    path('user_register/', views.user_register),
     # 用户登陆
-    path('user_login/', views.login),
+    path('user_login/', views.user_login),
     # 主席信息录入
     path('add_chair/', views.add_chair),
     # 查询主席信息
-    path('chair/<int:chair_id>', views.query_chair),
+    path('chair/<str:query_type>/<int:number>', views.query_chair),
     # 根据session查询所有会议信息
     path('conference/<int:session>/query_all_conference', views.query_conference),
 

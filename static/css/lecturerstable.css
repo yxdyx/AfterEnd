@@ -1,0 +1,50 @@
+.lecturers{
+    width: 100%;
+    padding: 80px 0 50px 0;
+    margin: 0 0 410px 0;
+}
+.lecturers .lecturersheader h3 {
+    padding: 80px 10% 0 10%;
+    text-align: center;
+    font-size: 2.1em;
+}
+
+.lecturerspic {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.lecturerspic  .information{
+    width:30%;
+    float: left;
+    margin: auto 3% auto 0;
+}
+
+.lecturerspic .title{
+    float: right;
+}
+.lecturerspic .word {
+    width:60%;
+    float: left;
+    position: relative;
+    top: 40px;
+}
+.lecturerspic .images{
+    float: right;
+    width: 60%;
+}
+
+@media (max-width: 1200px) {
+    .lecturerspic{
+        width: 90%;
+    }
+    .lecturerspic .images{
+        width: 100%;
+    }
+    .lecturerspic .word {
+        position: relative;
+        top: 20px;
+    }
+}

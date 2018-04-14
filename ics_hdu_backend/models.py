@@ -1,5 +1,4 @@
 from django.db import models
-from .utils.file_upload import Multimedia
 
 
 class Chair(models.Model):
@@ -37,9 +36,9 @@ class ChairPic(models.Model):
                 照片url地址：chair_pic_url}
     """
     chair_pic_id = models.AutoField(primary_key=True)
-    chair_id = models.IntegerField()
+    chair = models.ForeignKey(Chair, db_constraint=False, on_delete=models.DO_NOTHING)
     session = models.IntegerField()
-    chair_pic_url = models.CharField(upload_to=Multimedia.upload_to, max_length=255)
+    chair_pic_url = models.CharField(max_length=255)
 
     class Meta:
         managed = False
@@ -87,8 +86,8 @@ class Manage_Chair_Conference(models.Model):
                  主席id：chair_id}
     """
     manage_id = models.AutoField(primary_key=True)
-    conference_id = models.IntegerField()
-    chair_id = models.IntegerField()
+    conference = models.ForeignKey(Conference, db_constraint=False, on_delete=models.DO_NOTHING)
+    chair = models.ForeignKey(Chair, db_constraint=False, on_delete=models.DO_NOTHING)
 
     class Meta:
         managed = False

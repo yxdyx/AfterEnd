@@ -165,13 +165,13 @@
                     <ul class="down-menu nav-menu" style="touch-action: pan-y;">
 
                         <li>
-                            <a href="index.html">
+                            <a href="index">
                                 <div>Home</div>
                             </a>
                         </li>
 
                         <li class="sub-menu">
-                            <a href="conference.html" class="sf-with-ul">
+                            <a href="conference" class="sf-with-ul">
                                 <div>conferences</div>
                             </a>
 
@@ -179,7 +179,7 @@
 
 
                         <li class="sub-menu">
-                            <a href="chairs.html" class="sf-with-ul">
+                            <a href="chairs" class="sf-with-ul">
                                 <div>Chairs</div>
                             </a>
 
@@ -187,7 +187,7 @@
 
 
                         <li class="sub-menu">
-                            <a href="about.html" class="sf-with-ul">
+                            <a href="about" class="sf-with-ul">
                                 <div>About Us</div>
                             </a>
 
@@ -218,18 +218,14 @@
                 <br>
                 <br>
                 <div class="grid-item grid-item-sm-3">
-                    <img src="/static/images/human/TingWu.jpg" alt="" class="img-responsive center-block">
+                    <img src={{ chair_pic_url }} alt="" class="img-responsive center-block">
                 </div>
                 <div class="col-md-9">
-                    <h3>Ting Wu（吴铤）</h3>
+                    {# django 模板 {{ 'key' == value }} #}
+                    <h3>Name : {{ chair_name }}</h3>
+                    <h4>Organization : {{ chair_org }}</h4>
                     <p.small>
-                        &nbsp;&nbsp;Ting Wu is currently a professor of Hangzhou Dianzi University, and his major
-                        research interest is information security. He has been invited as the principal investigator in
-                        the 863 Project, and the member of the 973 Program. He has major research and development
-                        projects for the Natural Science Foundation of Zhejiang and National Natural Science Foundation.
-                        Now, he is the Dean of the School of Cyberspace, Hangzhou Dianzi University, the committee
-                        member of the secrecy and management department in the Ministry of Education, and the director
-                        of the Chinese Confidential Association.
+                        {{ chair_info }}
                     </p.small>
                 </div>
             </div>
@@ -261,13 +257,13 @@
                 <ul class="down-menu nav-menu" style="touch-action: pan-y;">
 
                     <li>
-                        <a href="index.html">
+                        <a href="index">
                             <div>Home</div>
                         </a>
                     </li>
 
                     <li class="sub-menu">
-                        <a href="conference.html" class="sf-with-ul">
+                        <a href="conference" class="sf-with-ul">
                             <div>conferences</div>
                         </a>
 
@@ -275,7 +271,7 @@
 
 
                     <li class="sub-menu">
-                        <a href="chairs.html" class="sf-with-ul">
+                        <a href="chairs" class="sf-with-ul">
                             <div>Chairs</div>
                         </a>
 
@@ -283,7 +279,7 @@
 
 
                     <li class="sub-menu">
-                        <a href="about.html" class="sf-with-ul">
+                        <a href="about" class="sf-with-ul">
                             <div>About Us</div>
                         </a>
 

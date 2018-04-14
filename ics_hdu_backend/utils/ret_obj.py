@@ -18,8 +18,11 @@ class ResultData(object):
         :return:
         """
         for _data in result_data:
-            self.tmp.append([_data.chair_id, _data.chair_name, _data.chair_org, _data.chair_info])
-        print(self.tmp)
+            self.tmp.append({'chair_id': _data.chair_id,
+                             'chair_name': _data.chair_name,
+                             'chair_org': _data.chair_org,
+                             'chair_pic_url': _data.chair_pic_url,
+                             'chair_info': _data.chair_info})
         return self
 
     def get_result_data(self):

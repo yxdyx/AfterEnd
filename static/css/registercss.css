@@ -1,0 +1,23 @@
+.form{
+	background-image: url(/static/images/web/hdubg_2.jpg);
+}
+.formtext{
+	color: whitesmoke;
+}
+.form-top{
+	padding: 50px 25px 15px 25px;
+	background: rgba(0, 0, 0, 0.6);
+	text-align: center;
+}
+.form-bottom{
+	padding: 50px 25px 50px 25px;
+	background: rgba(0, 0, 0, 0.6);
+}
+.login-form{
+	text-align:center;
+}
+.form-position-control {
+	width: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
