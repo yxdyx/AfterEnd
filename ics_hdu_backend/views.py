@@ -3,7 +3,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from ics_hdu_backend.service.chair_show_info import ChairInfoShow
-
+from ics_hdu_backend.service.user_register_service import UserLogin
+from ics_hdu_backend.service.conference_service import Conference
+from ics_hdu_backend.service.chair_service import ChairSave
 
 # Create your views here.
 # html文件的url跳转
@@ -81,7 +83,7 @@ def user_register(request):
     :param request:
     :return:
     """
-    pass
+    UserRegister(request)
 
 
 def user_login(request):
@@ -99,7 +101,21 @@ def add_chair(request):
     :param request:
     :return:
     """
-    pass
+    chair_save = ChairSave(request)
+    chair_save.addOrupdatetime()
+    chair_save.savechair()
+    return HttpResponse('OK')
+
+
+def add_conference(request):
+    '''
+
+    :param request
+    :return:
+    '''
+    conference = Conference(request)
+    conference.saveconference()
+    return HttpResponse('OK')
 
 
 def query_chair(request, query_type, number):
