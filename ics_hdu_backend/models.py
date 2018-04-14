@@ -1,5 +1,5 @@
 from django.db import models
-
+from ics_hdu_backend.utils.file_upload import Multimedia
 
 """
 by: liaochuntao
@@ -22,7 +22,7 @@ class Chair(models.Model):
     chair_update_time = models.DateField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'Chair'
 
     def __str__(self):
@@ -42,10 +42,10 @@ class ChairPic(models.Model):
     chair_pic_id = models.AutoField(primary_key=True)
     chair = models.ForeignKey(Chair, db_constraint=False, on_delete=models.DO_NOTHING)
     session = models.IntegerField()
-    chair_pic_url = models.CharField(max_length=255)
+    chair_pic_url = models.ImageField(upload_to=Multimedia.upload_to, max_length=255)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'ChairPic'
 
     def __str__(self):
@@ -71,7 +71,7 @@ class Conference(models.Model):
     conference_locaitons = models.CharField(max_length=512)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'Conference'
 
     def __str__(self):
@@ -94,7 +94,7 @@ class Manage_Chair_Conference(models.Model):
     chair = models.ForeignKey(Chair, db_constraint=False, on_delete=models.DO_NOTHING)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'Manage_Chair_Conference'
 
     def __str__(self):
@@ -115,7 +115,7 @@ class User(models.Model):
     user_password = models.CharField(max_length=20)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'User'
 
     def __str__(self):
