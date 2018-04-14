@@ -334,50 +334,74 @@
                     <h3>CHAIRS</h3>
                 </div>
                 <ul class="testimonials-grid grid-2 clearfix nobottommargin">
-                    <li>
+                    {% for chair in index_list.chair %}
+                        <li>
                         <div class="testimonial">
                             <div class="testi-image">
-                                <a href="figure/1">
-                                    <img src="/static/images/human/ZeFeiZhu.jpg" alt="ZeFei Zhu">
+                                <a href="figure/{{ chair.chair_id }}">
+                                    <img src={{ chair.chair_pic_url }} alt={{ chair.chair_name }}>
                                 </a>
                             </div>
                             <div class="testi-content">
                                 <div class="testi-meta">
-                                    ZeFei Zhu (朱泽飞)
+                                    {{ chair.chair_name }}
                                     <span>
                                                 <b>IoTS Chair</b>
                                             </span>
                                     <span>
                                                 <br>
                                                 <a href="http://www.hdu.edu.cn/"
-                                                   target="new">Hangzhou DianZi University</a>
+                                                   target="new">{{ chair.chair_org }}</a>
                                             </span>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li>
-                        <div class="testimonial">
-                            <div class="testi-image">
-                                <a href="figure/2">
-                                    <img src="/static/images/human/TingWu.jpg" alt="Ting Wu">
-                                </a>
-                            </div>
-                            <div class="testi-content">
-                                <div class="testi-meta">
-                                    Ting Wu (吴铤)
-                                    <span>
-                                                <b>IoTS Chair</b>
-                                            </span>
-                                    <span>
-                                                <br>
-                                                <a href="http://www.hdu.edu.cn/"
-                                                   target="new">Hangzhou DianZi University</a>
-                                            </span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                    {% endfor %}
+{#                    <li>#}
+{#                        <div class="testimonial">#}
+{#                            <div class="testi-image">#}
+{#                                <a href="figure/1">#}
+{#                                    <img src="/static/images/human/ZeFeiZhu.jpg" alt="ZeFei Zhu">#}
+{#                                </a>#}
+{#                            </div>#}
+{#                            <div class="testi-content">#}
+{#                                <div class="testi-meta">#}
+{#                                    ZeFei Zhu (朱泽飞)#}
+{#                                    <span>#}
+{#                                                <b>IoTS Chair</b>#}
+{#                                            </span>#}
+{#                                    <span>#}
+{#                                                <br>#}
+{#                                                <a href="http://www.hdu.edu.cn/"#}
+{#                                                   target="new">Hangzhou DianZi University</a>#}
+{#                                            </span>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <div class="testimonial">#}
+{#                            <div class="testi-image">#}
+{#                                <a href="figure/2">#}
+{#                                    <img src="/static/images/human/TingWu.jpg" alt="Ting Wu">#}
+{#                                </a>#}
+{#                            </div>#}
+{#                            <div class="testi-content">#}
+{#                                <div class="testi-meta">#}
+{#                                    Ting Wu (吴铤)#}
+{#                                    <span>#}
+{#                                                <b>IoTS Chair</b>#}
+{#                                            </span>#}
+{#                                    <span>#}
+{#                                                <br>#}
+{#                                                <a href="http://www.hdu.edu.cn/"#}
+{#                                                   target="new">Hangzhou DianZi University</a>#}
+{#                                            </span>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </li>#}
                 </ul>
             </div>
         </div>
@@ -431,45 +455,45 @@
         <div class="container">
             <a href="conference.html"><h2 class="section-title">HDU Conference Time Table</h2></a>
             <h4>We will always update the meeting time as above.</h4>
-            <div class="faqbox">
-                <div class="title">Machine Learning Discussion</div>
+            {% for conference in index_list.conference %}
+                <div class="faqbox">
+                <div class="title">{{ conference.conference_topic }}</div>
                 <p>
-                    <strong>Time</strong>: April 31 09:00am / <strong>location</strong>: Hangzhou Science and Technology
-                    Museum / <strong>chair</strong>: ZeFei Zhu
+                    <strong>Time</strong>: {{ conference.conferenec_start_time }} / <strong>location</strong>: {{ conference.conference_locations }}/ <strong>chair</strong>: {{ conference.chair_name }}
                 </p>
             </div>
-            <div class="faqbox longer">
-                <div class="title">Machine Learning Discussion</div>
-                <p>
-                    <strong>Time</strong>: April 31 09:00am <br> <strong>location</strong>: Hangzhou Science and
-                    Technology Museum <br> <strong>chair</strong>: ZeFei Zhu
-                </p>
-            </div>
-
-
-            <div class="faqbox">
-                <div class="title">Machine Learning Discussion</div>
-                <p>
-                    <strong>Time</strong>: April 31 09:00am / <strong>location</strong>: Hangzhou Science and Technology
-                    Museum / <strong>chair</strong>: ZeFei Zhu
-                </p>
-            </div>
-
-
-            <div class="faqbox">
-                <div class="title">Machine Learning Discussion</div>
-                <p>
-                    <strong>Time</strong>: April 31 09:00am / <strong>location</strong>: Hangzhou Science and Technology
-                    Museum / <strong>chair</strong>: Ting Wu
-                </p>
-            </div>
-            <div class="faqbox">
-                <div class="title">Machine Learning Discussion</div>
-                <p>
-                    <strong>Time</strong>: April 31 09:00am / <strong>location</strong>: Hangzhou Science and Technology
-                    Museum / <strong>chair</strong>: Ting Wu
-                </p>
-            </div>
+            {% endfor %}
+{#            <div class="faqbox">#}
+{#                <div class="title">Machine Learning Discussion</div>#}
+{#                <p>#}
+{#                    <strong>Time</strong>: April 31 09:00am / <strong>location</strong>: Hangzhou Science and Technology#}
+{#                    Museum / <strong>chair</strong>: ZeFei Zhu#}
+{#                </p>#}
+{#            </div>#}
+{##}
+{#            <div class="faqbox">#}
+{#                <div class="title">Machine Learning Discussion</div>#}
+{#                <p>#}
+{#                    <strong>Time</strong>: April 31 09:00am / <strong>location</strong>: Hangzhou Science and Technology#}
+{#                    Museum / <strong>chair</strong>: ZeFei Zhu#}
+{#                </p>#}
+{#            </div>#}
+{##}
+{##}
+{#            <div class="faqbox">#}
+{#                <div class="title">Machine Learning Discussion</div>#}
+{#                <p>#}
+{#                    <strong>Time</strong>: April 31 09:00am / <strong>location</strong>: Hangzhou Science and Technology#}
+{#                    Museum / <strong>chair</strong>: Ting Wu#}
+{#                </p>#}
+{#            </div>#}
+{#            <div class="faqbox">#}
+{#                <div class="title">Machine Learning Discussion</div>#}
+{#                <p>#}
+{#                    <strong>Time</strong>: April 31 09:00am / <strong>location</strong>: Hangzhou Science and Technology#}
+{#                    Museum / <strong>chair</strong>: Ting Wu#}
+{#                </p>#}
+{#            </div>#}
 
 
         </div>
@@ -492,21 +516,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12" style="margin: 0 0 100px 0">
+                    {% for chair in index_list.chair %}
                     <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="figureOne">
                             <h4 class="panel-title">
-                                <a role="button" href="figurezhuzefei.html"> ZeFei Zhu（朱泽飞）</a>
+                                <a role="button" href="figure/{{ chair.chair_id }}"> {{ chair.chair_name }}</a>
                             </h4>
                         </div>
                     </div>
+                    {% endfor %}
 
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="figureTwo">
-                            <h4 class="panel-title">
-                                <a role="button" href="figure.html"> Ting Wu（吴铤）</a>
-                            </h4>
-                        </div>
-                    </div>
+{#                    <div class="panel panel-default">#}
+{#                        <div class="panel-heading" role="tab" id="figureTwo">#}
+{#                            <h4 class="panel-title">#}
+{#                                <a role="button" href="figure.html"> Ting Wu（吴铤）</a>#}
+{#                            </h4>#}
+{#                        </div>#}
+{#                    </div>#}
 
 
                 </div>

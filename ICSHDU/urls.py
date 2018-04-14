@@ -48,7 +48,9 @@ urlpatterns = [
     path('user_login/', views.user_login),
     # 主席信息录入
     path('add_chair/', views.add_chair),
-    # 查询主席信息
+    # 查询主席信息 {type：single or all or session}
+    # single or all 是表示查询主席信息的个数 {单查询或者全部查询}
+    # session 是表示按照会议查询指定session的主席信息
     path('chair/<str:query_type>/<int:number>', views.query_chair),
     # 根据session查询所有会议信息
     path('conference/<int:session>/query_all_conference', views.query_conference),

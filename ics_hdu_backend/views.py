@@ -3,6 +3,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from ics_hdu_backend.service.chair_show_info import ChairInfoShow
+from ics_hdu_backend.service.conference_show_info import ConferenceShow
 
 
 # Create your views here.
@@ -13,7 +14,10 @@ def index(request):
     :param request:
     :return:
     """
-    return render(request, 'index.html')
+    chair_brief_info = ChairInfoShow(number=-1, query_type='all').query_chair()
+    conference_info = ConferenceShow().query_conference()
+    index_list = {'chair': chair_brief_info, 'conference': conference_info}
+    return render(request, 'index.html', {'index_list': index_list})
 
 
 def chairs(request):
@@ -69,7 +73,6 @@ def figure(request, chair_id):
     :return:
     """
     chair = ChairInfoShow(number=chair_id, query_type='single').query_chair().tmp[0]
-    print(chair)
     return render(request, 'figure.html', chair)
 
 

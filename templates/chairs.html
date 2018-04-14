@@ -141,20 +141,29 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <div class="panel panel-default">
+                {% for chair in chair_list %}
+                    <div class="panel panel-default">
                     <div class="panel-heading" role="tab">
                         <h4 class="panel-title">
-                            <a  role="button"  href="figure/1"  > ZeFei Zhu (朱泽飞)</a>
+                            <a  role="button"  href="figure/{{ chair.chair_id }}"  > {{ chair.chair_name }}</a>
                         </h4>
                     </div>
                 </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" >
-                        <h4 class="panel-title">
-                            <a  role="button"  href="figure/2"  > Ting Wu（吴铤）</a>
-                        </h4>
-                    </div>
-                </div>
+                {% endfor %}
+{#                <div class="panel panel-default">#}
+{#                    <div class="panel-heading" role="tab">#}
+{#                        <h4 class="panel-title">#}
+{#                            <a  role="button"  href="figure/1"  > ZeFei Zhu (朱泽飞)</a>#}
+{#                        </h4>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="panel panel-default">#}
+{#                    <div class="panel-heading" role="tab" >#}
+{#                        <h4 class="panel-title">#}
+{#                            <a  role="button"  href="figure/2"  > Ting Wu（吴铤）</a>#}
+{#                        </h4>#}
+{#                    </div>#}
+{#                </div>#}
             </div>
         </div>
     </div>

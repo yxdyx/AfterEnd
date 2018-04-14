@@ -24,3 +24,6 @@
 
 #### 2.2018-4-9
 使用`pip3 install pymysql`模块，使得可以在python3.x版本中的django使用mysql数据库。添加了了数据库连接设置，具体连接信息请联系github:chuntaojun
+
+### 3.2018-4-14
+请仔细看每个方法的注释信息！！！
