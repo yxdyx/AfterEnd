@@ -68,7 +68,7 @@ class Conference(models.Model):
     conference_topic = models.CharField(max_length=255)
     conference_start_time = models.DateTimeField()
     conference_end_time = models.DateTimeField()
-    conference_locaitons = models.CharField(max_length=512)
+    conference_locations = models.CharField(max_length=512)
 
     class Meta:
         managed = True
@@ -80,7 +80,7 @@ class Conference(models.Model):
                     'conference_topic': self.conference_topic,
                     'conference_start_time': self.conference_start_time,
                     'conference_end_time': self.conference_end_time,
-                    'conference_locations': self.conference_locaitons})
+                    'conference_locations': self.conference_locations})
 
 
 class Manage_Chair_Conference(models.Model):
