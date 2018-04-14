@@ -7,7 +7,7 @@ from .models import Manage_Chair_Conference
 
 """
 在admin内录入主席信息/主席照片/会议信息/主席与会议关系
-by: junyachen
+by: junyachen  
 """
 admin.site.register(Chair)
 admin.site.register(ChairPic)

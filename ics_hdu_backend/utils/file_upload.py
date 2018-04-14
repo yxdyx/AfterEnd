@@ -7,6 +7,7 @@ class Multimedia(object):
     更改图片上传路径
     by: junyachen
     """
+
     def __init__(self):
         """
 
@@ -26,3 +27,4 @@ class Multimedia(object):
                          'images',
                          'chair',
                          str(self.chair_id), str(self.session), realName])
+   
