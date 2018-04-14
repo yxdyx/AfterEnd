@@ -1,4 +1,7 @@
 class TimeFormat(object):
+    """
+    by: liaochuntao
+    """
     def __init__(self, time: str):
         self.month_dic = {'01': 'January',
                           '02': 'January',

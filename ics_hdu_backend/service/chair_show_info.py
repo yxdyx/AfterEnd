@@ -4,6 +4,9 @@ from ics_hdu_backend.model import DB as sql
 
 
 class ChairInfoShow(object):
+    """
+    by: liaochuntao
+    """
     def __init__(self, number=-1, query_type='single'):
         """
 

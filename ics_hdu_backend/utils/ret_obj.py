@@ -4,6 +4,7 @@ import json
 class ResultData(object):
     """
     返回数据json格式化
+    by: liaochuntao
     """
 
     def __init__(self):

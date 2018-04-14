@@ -2,8 +2,10 @@
   <dictionary name="tensor">
     <words>
       <w>chairpic</w>
+      <w>chairsave</w>
       <w>importantdate</w>
       <w>locaitons</w>
+      <w>orupdatetime</w>
     </words>
   </dictionary>
 </component>

@@ -6,6 +6,9 @@ from ics_hdu_backend.utils.time_format import TimeFormat
 
 
 class ConferenceShow(object):
+    """
+    by: liaochuntao
+    """
     def __init__(self, session=datetime.now().year):
         self.session = session
         self.tmp = None

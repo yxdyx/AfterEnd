@@ -1,6 +1,10 @@
 from django.db import models
 
 
+"""
+by: liaochuntao
+"""
+
 class Chair(models.Model):
     """
     主席信息 {自动增长列：chair_id,

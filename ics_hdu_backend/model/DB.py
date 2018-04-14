@@ -1,4 +1,6 @@
 """
+by: liaochuntao
+
 数据库查询sql语句
 
 CHAIR_INFO_BY_CHAIR_ID: 通过chair_id查询指定的主席信息 （single）

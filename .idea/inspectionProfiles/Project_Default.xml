@@ -16,6 +16,13 @@
           <option value="N811" />
         </list>
       </option>
+      <option name="ignoredBaseClasses">
+        <list>
+          <option value="unittest.TestCase" />
+          <option value="unittest.case.TestCase" />
+          <option value="ics_hdu_backend.service.chair_service.Chairsave" />
+        </list>
+      </option>
     </inspection_tool>
   </profile>
 </component>
