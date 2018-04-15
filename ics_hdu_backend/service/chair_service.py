@@ -24,12 +24,12 @@ class Chairsave(object):
             self.obj.save()
 
     def savechair(self):
-		"""
+        """
 
 		:return:
 		"""
-		chair = Chair()
-		chair.chair_name = self.chair_name
-		chair.chair_org = self.chair_org
-		chair.chair_info = self.chair_info
-		chair.save()
+        chair = Chair()
+        chair.chair_name = self.chair_name
+        chair.chair_org = self.chair_org
+        chair.chair_info = self.chair_info
+        chair.save()
