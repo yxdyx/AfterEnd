@@ -20,11 +20,11 @@ class Multimedia(object):
         :type filename: object
         :return:
         """
-        splitName = filename.split('.')
+        splitName = str(filename).split('.')
         nameBase = base64.b64encode(splitName[0].encode('utf-8'))
         realName = str(nameBase, 'utf-8') + '.' + splitName[len(splitName) - 1]
         return '/'.join([settings.STATIC_ROOT,
                          'images',
-                         'chair',
-                         str(self.chair_id), str(self.session), realName])
+                         'human',
+                         str(self.chair.chair_id), str(self.session), str(realName)])
    
