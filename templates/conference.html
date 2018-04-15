@@ -21,14 +21,10 @@
     <![endif]-->
 
 
-
-
-
     <!--时间表的样式-->
     <link href="/static/css/conftimetable.css" rel="stylesheet" type="text/css">
     <!--时间表的动态位置移动-->
     <link href="/static/css/conftimetable-responsive.css" rel="stylesheet" type="text/css" media="screen">
-
 
 
     <!-- External JavaScripts
@@ -63,7 +59,6 @@
     <meta name="theme-color" content="#ffffff">
 
 
-
     <title>HDU Conference Service Platform 2018</title>
 
 </head>
@@ -88,14 +83,6 @@
                 <!-- #logo end -->
 
 
-
-
-
-
-
-
-
-
                 <!-- Primary Navigation
                 ============================================= -->
                 <nav class="primary-menu">
@@ -116,7 +103,6 @@
                         </li>
 
 
-
                         <li class="sub-menu">
                             <a href="chairs" class="sf-with-ul">
                                 <div>Chairs</div>
@@ -125,7 +111,7 @@
                         </li>
 
 
-                        <li class="sub-menu" >
+                        <li class="sub-menu">
                             <a href="about" class="sf-with-ul">
                                 <div>About Us</div>
                             </a>
@@ -134,9 +120,7 @@
                         </li>
 
 
-
                     </ul>
-
 
 
                     <!-- #top-search end -->
@@ -149,64 +133,34 @@
         </div>
 
     </header>
-<div class="conftimetable" id="faqs_part">
-    <div class="container">
+    <div class="conftimetable" id="faqs_part">
+        <div class="container">
 
-        <h2>HDU Conference Time Table</h2>
-        <h4>We will always update the meeting time as above.</h4>
+            <h2>HDU Conference Time Table</h2>
+            <h4>We will always update the meeting time as above.</h4>
 
-
-        <div class="faqbox">
-            <div class="title">Machine Learning Discussion</div>
-            <p>
-                <strong>Time</strong>: April 31 09:00am / <strong>location</strong>: Hangzhou Science and Technology Museum / <strong>chair</strong>: ZeFei Zhu
-            </p>
+            {% for confer in conference_info %}
+                <div class="faqbox">
+                    <div class="title">{{ confer.conference_topic }}</div>
+                    <p>
+                        <strong>Time</strong>: {{ confer.conference_start_time }} /
+                        <strong>location</strong>: {{ confer.conference_locations }}/
+                        <strong>chair</strong>: {{ confer.chair_name }}
+                    </p>
+                </div>
+            {% endfor %}
         </div>
-
-        <div class="faqbox longer">
-            <div class="title">Machine Learning Discussion</div>
-            <p>
-                <strong>Time</strong>: April 31 09:00am <br> <strong>location</strong>: Hangzhou Science and Technology Museum <br> <strong>chair</strong>: ZeFei Zhu
-            </p>
-        </div>
-
-
-        <div class="faqbox">
-            <div class="title">Machine Learning Discussion</div>
-            <p>
-                <strong>Time</strong>: April 31 09:00am / <strong>location</strong>: Hangzhou Science and Technology Museum / <strong>chair</strong>: ZeFei Zhu
-            </p>
-        </div>
-
-
-        <div class="faqbox">
-            <div class="title">Machine Learning Discussion</div>
-            <p>
-                <strong>Time</strong>: April 31 09:00am / <strong>location</strong>: Hangzhou Science and Technology Museum / <strong>chair</strong>: Ting Wu
-            </p>
-        </div>
-
-
-        <div class="faqbox">
-            <div class="title">Machine Learning Discussion</div>
-            <p>
-                <strong>Time</strong>: April 31 09:00am / <strong>location</strong>: Hangzhou Science and Technology Museum / <strong>chair</strong>: Ting Wu
-            </p>
-        </div>
-
-
-
     </div>
-</div>
 </section>
-<footer id="footer" class="dark" style="margin-top: 883px">
+<footer id="footer" class="dark">
     <div class="container">
         <!-- Footer Widgets
             ============================================= -->
         <div class="footer-widgets-wrap clearfix">
             <div class="col_one_third">
                 <div class="widget clearfix">
-                    <img src="/static/images/web/hdu_ics_logo.png" alt="" class="footer-logo" style="float: left;width: 100%">
+                    <img src="/static/images/web/hdu_ics_logo.png" alt="" class="footer-logo"
+                         style="float: left;width: 100%">
                     <p style="position: relative;top:5px;left:25px">We will always update the meeting time as above.</p>
                 </div>
             </div>
@@ -227,7 +181,7 @@
                             <div>Chairs</div>
                         </a>
                     </li>
-                    <li class="sub-menu" >
+                    <li class="sub-menu">
                         <a href="about" class="sf-with-ul">
                             <div>About Us</div>
                         </a>
@@ -254,7 +208,8 @@
             <!--</div>-->
             <!--<div class="clear"></div>-->
         </div>
-    </div></div>
+    </div>
+    </div>
     <!-- #copyrights end -->
 </footer>
 <script type="text/javascript" src="/static/css/functions.js"></script>

@@ -20,6 +20,7 @@ def index(request):
     chair_brief_info = ChairInfoShow(number=-1, query_type='all').query_chair()
     conference_info = ConferenceShow().query_conference()
     index_list = {'chair': chair_brief_info, 'conference': conference_info}
+    print(index_list)
     return render(request, 'index.html', {'index_list': index_list})
 
 
@@ -29,7 +30,8 @@ def chairs(request):
     :param request:
     :return:
     """
-    return render(request, 'chairs.html')
+    _chair_info = ChairInfoShow(number=-1, query_type='all').query_chair()
+    return render(request, 'chairs.html', {'chair_list': _chair_info})
 
 
 def conference(request):
@@ -38,7 +40,8 @@ def conference(request):
     :param request:
     :return:
     """
-    return render(request, 'conference.html')
+    conference_info = ConferenceShow().query_conference()
+    return render(request, 'conference.html', {'conference_info': conference_info})
 
 
 def about(request):

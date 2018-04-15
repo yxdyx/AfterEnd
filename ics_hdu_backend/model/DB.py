@@ -50,3 +50,10 @@ CONFERENCE_INFO_BY_SESSION = 'select ' \
                              'where ' \
                                 'session=%s'
 
+
+if __name__ == '__main__':
+    fr = open('/media/tensor/resource/code/PythonProject/ICSHDU/ics_hdu_backend/model/DB.py')
+    for line in fr.readlines():
+        print(line)
+
+
