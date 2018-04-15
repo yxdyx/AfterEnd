@@ -25,7 +25,7 @@ SECRET_KEY = '(0xp%95g11125+z4f7la0ffhobkfy(6$z1mk7=^(a9rl&1yhmy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'ICSHDU.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'IoTS',
+        'NAME': 'forwebtest',
         'USER': 'root',
         'PASSWORD': '1203',
         'HOST': '120.24.90.180',
@@ -124,9 +124,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
+
+#python manage.py collectstatic
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 LOGGING = {
     'version': 1,
