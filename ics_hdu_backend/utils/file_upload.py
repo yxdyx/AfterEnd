@@ -19,7 +19,7 @@ class Multimedia(object):
         接收源文件二进制编码数据，将二进制编码数据进行保存
         :type filename: object
         :return:
-        """
+        """ 
         splitName = str(filename).split('.')
         nameBase = base64.b64encode(splitName[0].encode('utf-8'))
         realName = str(nameBase, 'utf-8') + '.' + splitName[len(splitName) - 1]
@@ -27,4 +27,3 @@ class Multimedia(object):
                          'images',
                          'human',
                          str(self.chair.chair_id), str(self.session), str(realName)])
-   
