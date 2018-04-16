@@ -38,15 +38,16 @@ CHAIR_INFO_BY_SESSION = 'select distinct ' \
                         'where ' \
                             'm.conference_id in (select conference_id from Conference where Conference.session=%s)'
 
-CONFERENCE_INFO_BY_SESSION = 'select ' \
+CONFERENCE_CHAIR_INFO_BY_SESSION = 'select ' \
                                 'conference_id, ' \
                                 'session, ' \
                                 'conference_topic, ' \
                                 'conference_start_time, ' \
                                 'conference_end_time, ' \
-                                'conference_locations ' \
+                                'conference_locations, ' \
+                                'chair_name ' \
                              'from ' \
-                                'Conference ' \
+                                '((Conference c1 join Mange_Chair_Conference m on c1.conference_id=m.conference_id) join Chair c2 on m.chair_id=c2.chair_id)' \
                              'where ' \
                                 'session=%s'
 
