@@ -78,7 +78,7 @@ def figure(request, chair_id):
     :param request:
     :return:
     """
-    chair = ChairInfoShow(number=chair_id, query_type='single').query_chair().tmp[0]
+    chair = ChairInfoShow(number=chair_id, query_type='single').query_chair()[0]
     return render(request, 'figure.html', chair)
 
 
