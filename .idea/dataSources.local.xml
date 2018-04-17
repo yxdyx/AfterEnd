@@ -10,5 +10,11 @@
       <user-name>root</user-name>
       <introspection-schemas>*:IoTS</introspection-schemas>
     </data-source>
+    <data-source name="@115.159.3.213" uuid="28c3c4bf-d0b1-45c8-a1a2-d41b03e0f844">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>root</user-name>
+    </data-source>
   </component>
 </project>

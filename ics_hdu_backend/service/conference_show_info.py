@@ -16,7 +16,7 @@ class ConferenceShow(object):
         self.conference_list = []
 
     def query_conference(self):
-        self.tmp = Conference.objects.raw(sql.CONFERENCE_INFO_BY_SESSION, [self.session])
+        self.tmp = Conference.objects.raw(sql.CONFERENCE_CHAIR_INFO_BY_SESSION, [self.session])
         return self.__query_data_beautify(result_data=self.tmp)
 
     def __query_data_beautify(self, result_data: Conference):
@@ -26,5 +26,6 @@ class ConferenceShow(object):
                                          'conference_topic': _conference.conference_topic,
                                          'conference_start_time': TimeFormat(time=_conference.conference_start_time).time_str_analyze(),
                                          'conference_end_time': TimeFormat(time=_conference.conference_end_time).time_str_analyze(),
-                                         'conference_locations': _conference.conference_locations})
+                                         'conference_locations': _conference.conference_locations,
+                                         'chair_name': _conference.chair_name})
         return self.conference_list
