@@ -27,3 +27,13 @@ class Multimedia(object):
                          'images',
                          'human',
                          str(self.chair.chair_id), str(self.session), str(realName)])
+
+    def picture_split(self, width=300, height=300):
+        """
+        利用opencv对图片进行裁剪（人脸的识别处理+图片大小的裁剪）
+        :param width:
+        :param height:
+        :return:
+        """
+        pass
+

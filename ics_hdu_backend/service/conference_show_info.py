@@ -26,5 +26,6 @@ class ConferenceShow(object):
                                          'conference_topic': _conference.conference_topic,
                                          'conference_start_time': TimeFormat(time=_conference.conference_start_time).time_str_analyze(),
                                          'conference_end_time': TimeFormat(time=_conference.conference_end_time).time_str_analyze(),
-                                         'conference_locations': _conference.conference_locations})
+                                         'conference_locations': _conference.conference_locations,
+                                         'chair_name': _conference.chair_name})
         return self.conference_list

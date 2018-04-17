@@ -38,7 +38,7 @@ CHAIR_INFO_BY_SESSION = 'select distinct ' \
                         'where ' \
                             'm.conference_id in (select conference_id from Conference where Conference.session=%s)'
 
-CONFERENCE_CHAIR_INFO_BY_SESSION = 'select ' \
+CONFERENCE_CHAIR_INFO_BY_SESSION = 'select distinct ' \
                                         'c1.conference_id, ' \
                                         'session, ' \
                                         'conference_topic, ' \
