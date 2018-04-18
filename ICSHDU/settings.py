@@ -118,12 +118,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # 本地测试版可以使用
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
+#
 # python manage.py collectstatic 服务器运行版配置
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 LOGGING = {
     'version': 1,
